@@ -1,6 +1,7 @@
 package config
 
 import (
+	"project/pokemon/models"
 	"strconv"
 
 	"gorm.io/driver/mysql"
@@ -34,5 +35,5 @@ func InitPort() {
 }
 
 func InitMigrate() {
-
+	DB.AutoMigrate(&models.Pokemon{})
 }
