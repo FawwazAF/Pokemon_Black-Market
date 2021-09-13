@@ -36,4 +36,6 @@ func InitPort() {
 
 func InitMigrate() {
 	DB.AutoMigrate(&models.Pokemon{})
+	DB.AutoMigrate(&models.Seller{})
+	DB.AutoMigrate(&models.Transaction{})
 }

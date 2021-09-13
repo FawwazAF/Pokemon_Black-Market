@@ -16,6 +16,11 @@ func New(e *echo.Echo) {
 	e.DELETE("/pokemons/:pokemon_id", controller.DeletePokemonInDatabase)
 	e.GET("/pokemons", controller.SearchAskedPokemon)
 
+	e.POST("/records", controller.PostRecordSoldPokemon)
+	e.GET("/sellers", controller.GetSellerList)
+	e.POST("/sellers", controller.PostAddSeller)
+	e.GET("/records", controller.GetAllRecordedTransaction)
+
 	//Login
 	eJwt := e.Group("/jwt")
 	eJwt.Use(middleware.JWT([]byte(constant.SECRET_JWT)))

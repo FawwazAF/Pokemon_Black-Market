@@ -46,3 +46,11 @@ func SearchPokemon(pokemon_name string) ([]models.Pokemon, error) {
 	}
 	return pokemon, nil
 }
+
+func GetPokemonById(pokemon_id uint) (models.Pokemon, error) {
+	var pokemon models.Pokemon
+	if err := config.DB.Find(&pokemon, "id = ?", pokemon_id).Error; err != nil {
+		return pokemon, err
+	}
+	return pokemon, nil
+}
