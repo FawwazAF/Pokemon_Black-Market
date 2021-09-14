@@ -6,7 +6,7 @@ import (
 )
 
 func AddPokemon(pokemon models.Pokemon) (models.Pokemon, error) {
-	if err := config.DB.Save(&pokemon).Error; err != nil {
+	if err := config.DB.Create(&pokemon).Error; err != nil {
 		return pokemon, err
 	}
 	return pokemon, nil

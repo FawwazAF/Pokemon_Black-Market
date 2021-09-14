@@ -7,7 +7,7 @@ import (
 )
 
 type Pokemon struct {
-	ID        uint   `gorm:"primarykey" json:"id"`
+	ID        uint   `gorm:"primarykey;uniqueIndex" json:"id"`
 	Name      string `json:"name"`
 	Stock     int    `json:"stock" form:"stock"`
 	CreatedAt time.Time
