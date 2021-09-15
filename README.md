@@ -4,7 +4,7 @@
 Transaction Record for sold pokemon
 
 # ERD Design
-<img src="https://imgur.com/a/d7FsXmu">
+<img src="https://imgur.com/dHvGiTX">
 
 # Sample API
 
