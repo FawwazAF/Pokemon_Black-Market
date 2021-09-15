@@ -10,3 +10,5 @@ Transaction Record for sold pokemon
 
 * Browsing Pokemon          : `GET /pokemon/:pokemon_id`
   - Data fetched from https://pokeapi.co/
+
+You can get more API at routes
