@@ -55,7 +55,7 @@ func PostRecordSoldPokemon(c echo.Context) error {
 	c.Bind(&transaction)
 
 	//Search Pokemon
-	pokemon, err := database.GetPokemonById(transaction.PokemonID) //Func in database/pokemon.go
+	pokemon, err := database.GetPokemonFromDatabase(int(transaction.PokemonID)) //Func in database/pokemon.go
 	if err != nil {
 		return c.JSON(http.StatusBadRequest, map[string]interface{}{
 			"message": "cannot get pokemon from database",

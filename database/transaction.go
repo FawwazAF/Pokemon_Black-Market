@@ -69,7 +69,7 @@ func EditClaimedWarrantStock(transaction models.Transaction) (models.Transaction
 	}
 
 	//Edit Transaction Status
-	transaction.Status = "Reclaimed"
+	transaction.Status = "reclaimed"
 	transaction.Pokemon = pokemon
 	if err := config.DB.Save(&transaction).Error; err != nil {
 		return transaction, err

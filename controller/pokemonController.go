@@ -95,6 +95,7 @@ func PutEditStockPokemon(c echo.Context) error {
 
 	//Edit Pokemon
 	c.Bind(&pokemon)
+
 	editted_pokemon, err := database.EditPokemon(pokemon)
 	if err != nil {
 		return c.JSON(http.StatusInternalServerError, map[string]interface{}{
